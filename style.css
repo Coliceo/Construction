@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+:root {
+    --font-color: #333;
+    --heading-color: #1a1a1a;
+    --primary-color: #006699;  
+    --secondary-color: #f2f2f2; 
+    --navbar-color: #004466;  
+    --button-color: #ffcc00; 
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    text-transform: none;
+    text-align: center;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 1rem 7%;
+    background-color: var(--navbar-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+}
+
+header .logo img {
+    width: 120px; /* Adjust based on actual logo size */
+}
+
+nav a {
+    margin: 0 1rem;
+    padding: 0.5rem 1rem;
+    color: white;
+    font-size: 1.2rem;
+    background-color: var(--primary-color);
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav a:hover, nav a:focus {
+    background-color: var(--button-color);
+    color: var(--navbar-color);
+}
+
+.container {
+    margin-top: 100px; /* To avoid overlap with the fixed header */
+    padding: 5rem;
+    background-color: var(--secondary-color);
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.container .image {
+    flex-basis: 30%; /* Reduce the width by 25% */
+    max-width: 30%; /* Reduce the max-width by 25% */
+    padding-right: 2rem;
+}
+
+.container .image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+#containerIntro {
+    flex-basis: 70%;
+}
+
+#containerIntro h1 {
+    margin: 20px 0;
+    font-size: 2rem;
+    text-align: center;
+}
+
+#containerIntro p {
+    font-size: 1.5rem; /* Increased font size */
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+.card-section {
+    text-align: center;
+    padding: 2rem 0;
+    background-color: var(--secondary-color);
+}
+
+.card-section h2 {
+    color: var(--heading-color);
+    margin-bottom: 1rem;
+}
+
+.cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.card {
+    width: calc(33.333% - 1rem);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+.card img {
+    width: 100%;
+    max-height: 400px; /* Adjust height to make images uniform */
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.card h3 {
+    color: var(--heading-color);
+    margin-top: 1rem;
+}
+
+.card p {
+    color: var(--font-color);
+    text-align: left;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container .image, #containerIntro {
+        flex-basis: 100%;
+        max-width: 100%;
+        padding: 0;
+    }
+
+    .cards {
+        flex-direction: column;
+    }
+
+    .card {
+        width: 100%;
+    }
+}
+
+.home-container {
+    margin-top: 120px;  /* Adjust this value as needed */
+}
+
+.text {
+    padding: 30px;
+}
