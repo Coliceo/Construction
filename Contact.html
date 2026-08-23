@@ -3,61 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Nila-Structures</title>
+    <meta name="description" content="Get a free consultation from Nila-Structures. Call, email, or send us a message about your driveway, renovation, or outdoor construction project in Waterbury, CT.">
+    <link rel="canonical" href="https://nila-structures.com/Contact.html">
+    <link rel="icon" type="image/png" href="Images/favicon.png">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <title>Nila-Structures</title>
 </head>
 <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
     <header>
         <div class="logo">
-            <img src="Images/Logo.webp" alt="Nila-Structures Logo">
+            <img src="Images/logo.webp" alt="Nila-Structures" width="120" height="120">
         </div>
-        <nav>
+        <nav aria-label="Primary">
             <a href="index.html">Home</a>
-            <a href="Contact.html">Contact Us</a>
+            <a href="Contact.html" aria-current="page">Contact Us</a>
         </nav>
     </header>
 
-    <main class="container">
+    <main class="container" id="main-content">
+        <h1 class="visually-hidden">Contact Nila-Structures</h1>
         <div class="content">
-            <section class="left-side">
+            <section class="left-side" aria-labelledby="contact-info-heading">
+                <h2 id="contact-info-heading" class="visually-hidden">Contact Information</h2>
                 <div class="address details">
-                    <i class="fas fa-map-marker-alt"></i>
+                    <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
                     <div class="topic">Address</div>
                     <div class="text-one">Waterbury, CT 06704</div>
                 </div>
                 <div class="phone details">
-                    <i class="fas fa-phone-alt"></i>
+                    <i class="fas fa-phone-alt" aria-hidden="true"></i>
                     <div class="topic">Phone</div>
-                    <div class="text-one">203 568 5094</div>
+                    <div class="text-one"><a href="tel:+12035685094">203 568 5094</a></div>
                 </div>
                 <div class="email details">
-                    <i class="fas fa-envelope"></i>
+                    <i class="fas fa-envelope" aria-hidden="true"></i>
                     <div class="topic">Email</div>
-                    <div class="text-one">nilastructures@gmail.com</div>
+                    <div class="text-one"><a href="mailto:nilastructures@gmail.com">nilastructures@gmail.com</a></div>
                 </div>
             </section>
-            <section class="right-side">
-                <div class="topic-text">Contact Us</div>
+            <section class="right-side" aria-labelledby="contact-form-heading">
+                <div class="topic-text" id="contact-form-heading">Contact Us</div>
                 <h3>Feel free to reach out for a free consultation. We are more than happy to help you with your project.</h3>
                 <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
                     <div class="input-box">
-                        <input type="text" name="name" placeholder="Enter your name" required>
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" placeholder="Enter your name" required>
                     </div>
                     <div class="input-box">
-                        <input type="email" name="email" placeholder="Enter your email" required>
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email" required>
                     </div>
                     <div class="input-box message-box">
-                        <textarea name="message" placeholder="Enter your message" required></textarea>           
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" placeholder="Enter your message" required></textarea>
                     </div>
                     <div class="button">
                         <input type="submit" value="Send Now">
                         <input type="hidden" name="access_key" value="92072c54-d889-4888-b02e-5868795c65ab">
                     </div>
-                </form>                
+                </form>
             </section>
         </div>
     </main>
+
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <img src="Images/logo.webp" alt="" width="60" height="60">
+                <p>Nila-Structures</p>
+            </div>
+            <div class="footer-contact">
+                <p>Waterbury, CT 06704</p>
+                <p><a href="tel:+12035685094">203&nbsp;568&nbsp;5094</a></p>
+                <p><a href="mailto:nilastructures@gmail.com">nilastructures@gmail.com</a></p>
+            </div>
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="Contact.html">Contact Us</a>
+            </div>
+        </div>
+        <p class="footer-copyright">&copy; <span id="year">2026</span> Nila-Structures. All rights reserved.</p>
+    </footer>
+
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
